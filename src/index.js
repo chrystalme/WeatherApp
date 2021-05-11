@@ -59,10 +59,15 @@ request.onload = () => {
 btnGetWeather.addEventListener('click', () => {
   displayRemove();
   if (myCity.value === '') {
-    city = 'Lagos';
-  } else {
-    city = myCity.value;
+    // city = 'Lagos';
+    p.classList.add('text-danger');
+    p.innerHTML = 'Invalid location.';
+    resultInner.appendChild(p);
+    result.appendChild(resultInner);
+    return;
   }
+  city = myCity.value;
+  p.classList.remove('text-danger');
   url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=f143eabdcb81c14621c46bee170ba541`;
 
   // async function getData() {
