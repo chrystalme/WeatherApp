@@ -19,8 +19,16 @@
     "@babel/preset-env": "^7.14.1",
     "@webpack-cli/generators": "^2.1.0",
     "babel-cli": "^6.26.0",
+    "babel-eslint": "10.1.x",
     "babel-loader": "^8.2.2",
     "babel-preset-env": "^1.7.0",
+    "eslint": "6.8.x",
+    "eslint-config-airbnb-base": "14.1.x",
+    "eslint-plugin-import": "2.20.x",
+    "stylelint": "13.3.x",
+    "stylelint-config-standard": "20.0.x",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "3.17.x",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.7.0"
   }
