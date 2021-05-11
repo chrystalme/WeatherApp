@@ -5,30 +5,35 @@ const form = document.querySelector('form');
 const myCity = document.getElementById('city-input');
 const btnGetWeather = document.getElementById('get-weather');
 const result = document.getElementById('result');
-result.style.backgroundImage = 'http://www.freeppt.net/background/april-weather-backgrounds-for-powerpoint.jpg'
+result.style.backgroundImage = 'http://www.freeppt.net/background/april-weather-backgrounds-for-powerpoint.jpg';
 const resultInner = document.createElement('div');
 resultInner.id = 'inner-content';
 
 let url;
 let city;
 
+function reset() {
+  form.reset();
+}
+
 btnGetWeather.addEventListener('click', () => {
   city = myCity.value;
   url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=f143eabdcb81c14621c46bee170ba541`;
- 
-// async function getData() {
-//   const response = await fetch(url,
-//     {
-// mode: 'cors';
-//   } );
 
-//   if (response.status === 400) {
-//     return
-//   }else{
-//     const data = await response.json();
-//     console.log(data);
-//   }
-// }
+  // async function getData() {
+  //   const response = await fetch(url,
+  //     {
+  // mode: 'cors';
+  //   } );
+
+  //   if (response.status === 400) {
+  //     return
+  //   }else{
+  //     const data = await response.json();
+  //     console.log(data);
+  //   }
+  // }
+
   // fetch(url)
   //   .then((response) => response.json()).then((response) => {
   //     const data = response;
@@ -82,7 +87,3 @@ btnGetWeather.addEventListener('click', () => {
   };
   reset();
 });
-
-function reset() {
-  form.reset();
-}
