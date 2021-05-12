@@ -7,7 +7,7 @@ const btnGetWeather = document.getElementById('get-weather');
 const result = document.getElementById('result');
 const resultInner = document.createElement('div');
 resultInner.id = 'inner-content';
-resultInner.classList.add('text-center', 'mt-2');
+resultInner.classList.add('text-center', 'mt-2', 'text-white');
 const temp = document.createElement('span');
 const tempUnit = document.createElement('h6');
 const h3 = document.createElement('h3');

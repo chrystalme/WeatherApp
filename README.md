@@ -1,15 +1,46 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 Weather application using API
 
-This project has been created using **webpack-cli**, you can now run
+## Built With
+
+- JavaScript
+- Webpack
+- Html
+- Bootstrap
+
+### System requirements
+
+- Web Browser
+
+## Install WebPack
 
 ```
-npm run build
+$ npm install --save-dev webpack
 ```
 
-or
+## Getting Started
+
+To get a local copy of the repository please run the following commands on your terminal:
 
 ```
-yarn build
+$ cd <folder>
 ```
 
-to bundle your application
+```
+$ git clone https://github.com/chrystalme/WeatherApp.git
+```
+
+```
+$ cd TodoList
+```
+
+## Instructions
+
+> To view the weather of a city, just type the city name and click the get weather button
+
+## Authors
+
+👤 **Malieze Afam Ifeanyi**
+
+- GitHub: [@chrystalme](https://github.com/chrystalme)
+- Twitter: [@afam_ifeanyi](https://twitter.com/afam_ifeanyi)
+- LinkedIn: [Malieze Afam Ifeanyi(chrys)](https://linkedin.com/in/afam-chrys)
