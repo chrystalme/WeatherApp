@@ -1,5 +1,7 @@
 # 🚀 Weather application using API
 
+In this project, I demonstrated the use of fetch method in consuming API data. Also, I used asynchronous JavaScript in the process.
+
 ## Built With
 
 - JavaScript
