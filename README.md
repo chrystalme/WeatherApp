@@ -1,5 +1,7 @@
 # 🚀 Weather application using API
 
+In this project, I demonstrated the use of fetch method in consuming API data. Also, I used asynchronous JavaScript in the process.
+
 ## Built With
 
 - JavaScript
@@ -30,7 +32,7 @@ $ git clone https://github.com/chrystalme/WeatherApp.git
 ```
 
 ```
-$ cd TodoList
+$ cd WeatherApp
 ```
 
 ## Instructions
@@ -44,3 +46,21 @@ $ cd TodoList
 - GitHub: [@chrystalme](https://github.com/chrystalme)
 - Twitter: [@afam_ifeanyi](https://twitter.com/afam_ifeanyi)
 - LinkedIn: [Malieze Afam Ifeanyi(chrys)](https://linkedin.com/in/afam-chrys)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/chrystalme/WeatherApp/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [Microverse](https://microverse.org)
+
+## 📝 License
+
+This project is [MIT](https://mit-license.org/) licensed.
