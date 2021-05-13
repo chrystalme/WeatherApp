@@ -73,7 +73,7 @@ const getData = async url => {
   result.appendChild(resultInner);
 };
 
-url = 'https://api.openweathermap.org/data/2.5/weather?q=jos&units=metric&appid=f143eabdcb81c14621c46bee170ba541';
+url = 'https://api.openweathermap.org/data/2.5/weather?q=Beirut&units=metric&appid=f143eabdcb81c14621c46bee170ba541';
 getData(url);
 document.getElementById('celsius').disabled = true;
 
@@ -97,13 +97,13 @@ btnGetWeather.addEventListener('click', () => {
   reset();
 });
 
-function setCelcius() {
+const setCelcius = () => {
   document.getElementById('celsius').disabled = true;
   getData(url);
   document.getElementById('fahrenheit').disabled = false;
-}
+};
 
-function setFahrenheit() {
+const setFahrenheit = () => {
   const cel = temp.innerHTML;
   const feelsLike = document.getElementById('p').innerHTML;
   const minTemp = document.getElementById('p1').innerHTML;
@@ -118,7 +118,7 @@ function setFahrenheit() {
   document.getElementById('p2').innerHTML = `${fahrenheit3}`;
   document.getElementById('fahrenheit').disabled = true;
   document.getElementById('celsius').disabled = false;
-}
+};
 
 window.onload = () => {
   const celsius = document.getElementById('celsius');
