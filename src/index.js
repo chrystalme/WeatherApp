@@ -75,32 +75,6 @@ btnGetWeather.addEventListener('click', () => {
   p.classList.remove('text-danger');
   url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=f143eabdcb81c14621c46bee170ba541`;
 
-  // async function getData() {
-  //   const response = await fetch(url,
-  //     {
-  // mode: 'cors';
-  //   } );
-
-  //   if (response.status === 400) {
-  //     return
-  //   }else{
-  //     const data = await response.json();
-  //     console.log(data);
-  //   }
-  // }
-
-  // fetch(url)
-  //   .then((response) => response.json()).then((response) => {
-  //     const data = response;
-  //     if (data.city) {
-  //       console.log(data.city.name);
-  //     }else{
-  //       const p = document.createElement('p');
-  //       p.innerHTML = 'City does not exist.';
-  //       myCity.appendChild(p);
-  //     }
-  //   });
-
   getData();
   reset();
 });
