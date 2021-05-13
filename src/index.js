@@ -77,22 +77,20 @@ url = 'https://api.openweathermap.org/data/2.5/weather?q=Beirut&units=metric&app
 getData(url);
 document.getElementById('celsius').disabled = true;
 
-const getUrl = () => {
+
+btnGetWeather.addEventListener('click', () => {
+  displayRemove();
   if (myCity.value === '') {
-    p.classList.add('text-danger');
-    p.innerHTML = 'Invalid location.';
-    resultInner.appendChild(p);
+    resultInner.classList.add('text-danger');
+    resultInner.classList.remove('text-white');
+    resultInner.innerHTML = 'Invalid location.';
     result.appendChild(resultInner);
     return;
   }
   city = myCity.value;
-  p.classList.remove('text-danger');
+  resultInner.classList.remove('text-danger');
+  resultInner.classList.add('text-white');
   url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=f143eabdcb81c14621c46bee170ba541`;
-};
-
-btnGetWeather.addEventListener('click', () => {
-  displayRemove();
-  getUrl();
   getData(url);
   reset();
 });
