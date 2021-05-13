@@ -58,10 +58,10 @@ const getData = async url => {
   const iconImg = data.weather[0].icon;
   resultInner.appendChild(h3);
   temp.innerHTML = Math.round(data.main.temp);
-  p.innerHTML = `Feels Like : ${Math.round(data.main.feels_like)}`;
-  p1.innerHTML = `Minimum Temperature : ${Math.round(data.main.temp_min)}`;
-  p2.innerHTML = `Maximum Temperature : ${Math.round(data.main.temp_max)}`;
-  p3.innerHTML = `Humidity : ${Math.round(data.main.humidity)}`;
+  p.innerHTML = `Feels Like : <span id='p'>${Math.round(data.main.feels_like)}</span>`;
+  p1.innerHTML = `Minimum Temperature : <span id='p1'>${Math.round(data.main.temp_min)}</span>`;
+  p2.innerHTML = `Maximum Temperature : <span id='p2'>${Math.round(data.main.temp_max)}</span>`;
+  p3.innerHTML = `Humidity : <span id='p3'>${Math.round(data.main.humidity)}</span>`;
   icon.src = `http://openweathermap.org/img/wn/${iconImg}@2x.png`;
   div.appendChild(temp);
   div.appendChild(icon);
@@ -93,24 +93,29 @@ const getUrl = () => {
 btnGetWeather.addEventListener('click', () => {
   displayRemove();
   getUrl();
-  
   getData(url);
   reset();
 });
 
 function setCelcius() {
   document.getElementById('celsius').disabled = true;
-  // displayRemove();
-  // getUrl();
-  // p.classList.remove('text-danger');
   getData(url);
   document.getElementById('fahrenheit').disabled = false;
 }
 
 function setFahrenheit() {
   const cel = temp.innerHTML;
+  const feelsLike = document.getElementById('p').innerHTML;
+  const minTemp = document.getElementById('p1').innerHTML;
+  const maxTemp = document.getElementById('p2').innerHTML;
   const fahrenheit = Math.round((cel * (9 / 5)) + 32);
+  const fahrenheit1 = Math.round((feelsLike * (9 / 5)) + 32);
+  const fahrenheit2 = Math.round((minTemp * (9 / 5)) + 32);
+  const fahrenheit3 = Math.round((maxTemp * (9 / 5)) + 32);
   temp.innerHTML = `${fahrenheit}`;
+  document.getElementById('p').innerHTML = `${fahrenheit1}`;
+  document.getElementById('p1').innerHTML = `${fahrenheit2}`;
+  document.getElementById('p2').innerHTML = `${fahrenheit3}`;
   document.getElementById('fahrenheit').disabled = true;
   document.getElementById('celsius').disabled = false;
 }
