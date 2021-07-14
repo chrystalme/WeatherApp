@@ -63,6 +63,7 @@ const getData = async url => {
   p2.innerHTML = `Maximum Temperature : <span id='p2'>${Math.round(data.main.temp_max)}</span>`;
   p3.innerHTML = `Humidity : <span id='p3'>${Math.round(data.main.humidity)}</span>`;
   icon.src = `https://openweathermap.org/img/wn/${iconImg}@2x.png`;
+  icon.setAttribute('alt', `image-${iconImg}`);
   div.appendChild(temp);
   div.appendChild(icon);
   resultInner.appendChild(div);
